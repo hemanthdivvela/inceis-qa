@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from '../fixtures/auth.fixture';
 import fs from 'fs';
 import path from 'path';
 import XLSX from 'xlsx';

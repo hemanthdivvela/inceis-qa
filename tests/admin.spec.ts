@@ -1,4 +1,4 @@
-import { test } from '@playwright/test';
+import { test } from '../fixtures/auth.fixture';
 //import { userData } from '../utils/testData';
 import { AdministrationPage } from '../pages/admin';
 //import userData from '../testdata/adminpage.json';
@@ -9,11 +9,11 @@ const userData:any=JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
 
 
 test.describe("Login Tests", () => {
-  test('Create Admin - District Municipality', async ({ page }) => {
+  test('Create Admin - District Municipality', async ({ authenticatedPage,page }) => {
     const admin = new AdministrationPage(page);
     const adminData = userData[0];
 
-    await page.goto('/inceis/dashboard#!',{ waitUntil: 'networkidle' });
+    await page.goto('/inceis/dashboard#!');
 
     await admin.admin_menu(
       adminData.email,
@@ -40,7 +40,7 @@ test.describe("Login Tests", () => {
   });
 });
 
-test('Create Admin - Metro', async ({ page }) => {
+test('Create Admin - Metro', async ({ authenticatedPage, page }) => {
   const admin = new AdministrationPage(page);
   const adminData = userData[1];
 
