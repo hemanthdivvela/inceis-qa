@@ -12,4 +12,4 @@ test-results/
 playwright-report/
 /allure-results
 /allure-report
-/test/.auth
+/tests/.auth

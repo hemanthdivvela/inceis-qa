@@ -1,5 +1,5 @@
 import { test as base, expect } from '@playwright/test';
-import fs from 'fs' with { type: 'module' };
+import fs from 'fs';
 
 // @ts-ignore
 
