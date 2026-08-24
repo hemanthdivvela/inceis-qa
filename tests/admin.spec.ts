@@ -1,4 +1,4 @@
-import { test } from '../fixtures/auth.fixture';
+import { test } from '@playwright/test';
 //import { userData } from '../utils/testData';
 import { AdministrationPage } from '../pages/admin';
 //import userData from '../testdata/adminpage.json';

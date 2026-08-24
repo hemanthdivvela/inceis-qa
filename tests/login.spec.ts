@@ -1,5 +1,4 @@
-// IMPORT FROM YOUR CUSTOM FIXTURE, NOT @playwright/test
-import { test, expect } from '../fixtures/auth.fixture';
+import { test, expect } from '@playwright/test';
 import fs from 'fs'
 import path from 'path';
 import { LoginPage } from '../pages/LoginPage';
