@@ -25,7 +25,7 @@ jobs:
     - name: Create Playwright auth file
       run: |
         mkdir -p playwright/.auth
-        printf '%s' '${{ secrets.PLAYWRIGHT_AUTH }}' > tests/.auth/user.json
+        printf '%s' '${{ secrets.auth }}' > tests/.auth/user.json
 
     - name: Install Playwright
       run: npx playwright install --with-deps
