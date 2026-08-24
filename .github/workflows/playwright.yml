@@ -22,6 +22,8 @@ jobs:
         USERNAME=${{ secrets.TEST_USERNAME }}
         PASSWORD=${{ secrets.TEST_PASSWORD }}
         EOF
+    - name: Create Playwright auth directory
+      run: mkdir -p tests/.auth
     - name: Create Playwright auth file
       run: |
         mkdir -p playwright/.auth

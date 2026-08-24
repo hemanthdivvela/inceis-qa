@@ -46,6 +46,7 @@ export default defineConfig({
     //viewport: { width: 1280, height: 720 }, // Fixed size
     screenshot: 'only-on-failure',
     video: 'retain-on-failure-and-retries',
+    storageState: 'tests/.auth/user.json',
     
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
