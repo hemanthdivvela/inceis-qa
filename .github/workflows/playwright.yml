@@ -22,11 +22,6 @@ jobs:
         USERNAME=${{ secrets.TEST_USERNAME }}
         PASSWORD=${{ secrets.TEST_PASSWORD }}
         EOF
-    - name: Create Playwright auth file
-      run: |
-        mkdir -p playwright/.auth
-        printf '%s' '${{ secrets.auth }}' > tests/.auth/user.json
-
     - name: Install Playwright
       run: npx playwright install --with-deps
     - name: Run Playwright tests
