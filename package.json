@@ -1,0 +1,31 @@
+{
+  "name": "inceis",
+  "version": "1.0.0",
+  "description": "A Playwright Project using TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test-headed": "npx playwright test --headed",
+    "test-report": "npx playwright show-report",
+    "test-trace": "npx playwright test --trace on",
+    "test-debug": "npx playwright test --debug",
+    "test-headed-chrome": "npx playwright test --project=chromium --headed",
+    "test-ui": "npx playwright test --ui",
+    "test-slow-headed": "set SLOW_MO=1000 && npx playwright test --headed",
+    "test-slow": "set SLOW_MO=1000 && npx playwright test"
+  },
+  "keywords": [],
+  "author": "Hemanth Divvela",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.1.1",
+    "allure-playwright": "^3.10.2",
+    "dotenv": "^17.4.2"
+  },
+  "dependencies": {
+    "csv-parse": "^7.0.2",
+    "xlsx": "^0.18.5"
+  }
+}

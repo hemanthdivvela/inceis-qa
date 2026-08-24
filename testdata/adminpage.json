@@ -1,0 +1,39 @@
+[
+ {
+  "email": "john@test.com",
+  "firstname": "John",
+  "surname": "Doe",
+  "gender": "Male",
+  "cellNumber": "9876543210",
+  "Designation": [ "Classification Officer", "Supervisor Level 2"],
+  "Associate_Department": ["Criminal Investigation","Administrative Enforcement","Both Criminal Investigation& Administrative Enforcement"],
+  "province": { "index": 2 },
+  "Government": "Provincial Conservation",
+  "Institution": "Cape Nature",
+  "selectedArea": "District_Municipality",
+  "District_Municipalitys": "Fezile Dabi",
+  "Local_Municipality": "Metsimaholo"
+
+  },
+  {
+    "email": "michael.brown@test.com",
+    "firstname": "Michael",
+    "surname": "Brown",
+    "gender": "Male",
+    "cellNumber": "9234567891",
+    "Designation": [ "Supervisor Level 2"],
+    "Associate_Department": [
+      "Criminal Investigation"
+    ],
+    "province": {
+      "index": 2
+    },
+    "Government": "Provincial Conservation",
+    "Institution": "Cape Nature",
+    "selectedArea": "Metro",
+    "District_Municipalitys": "",
+    "Local_Municipality": "",
+    "Metros":"Mangaung"
+  }
+  
+]

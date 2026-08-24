@@ -1,0 +1,22 @@
+[
+    {
+        "email":"Admin@Gpinfotech.com",
+        "password": "Gpinfo1234$",
+        "validity": "valid"
+    },
+    {
+        "email":"hemanth@123gp.com",
+        "password": "wrongpassword",
+        "validity": "invalid"
+    },
+    {
+        "email":"sai",
+        "password": "Gpinfo1234$",
+        "validity": "invalid"
+    },
+    {
+        "email":" ",
+        "password":" ",
+        "validity": "invalid"
+    }
+]
