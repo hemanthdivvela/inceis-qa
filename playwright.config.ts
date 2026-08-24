@@ -54,7 +54,7 @@ export default defineConfig({
     //storageState: '.auth/user.json',
     
     ignoreHTTPSErrors: true,
-    headless: false
+    headless: true
   },
 
   /* Configure projects for major browsers */
