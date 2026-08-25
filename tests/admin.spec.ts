@@ -38,37 +38,37 @@ test.describe("Login Tests", () => {
       ''
     );
   });
+
+    test('Create Admin - Metro', async ({ authenticatedPage, page }) => {
+    const admin = new AdministrationPage(page);
+    const adminData = userData[1];
+
+    await page.goto('/inceis/dashboard#!');
+
+    await admin.admin_menu(
+      adminData.email,
+      adminData.firstname,
+      adminData.surname,
+      adminData.gender,
+      adminData.cellNumber,
+      adminData.Designation,
+      adminData.Associate_Department,
+      adminData.province.index,
+      adminData.Government,
+      adminData.Institution,
+      adminData.District_Municipalitys,
+      adminData.Local_Municipality,
+      adminData.Metros
+    );
+
+    await admin.selectArea(
+      'Metro',
+      '',
+      '',
+      adminData.Metros
+    );
+
+  });
+
 });
 
-test('Create Admin - Metro', async ({ authenticatedPage, page }) => {
-  const admin = new AdministrationPage(page);
-  const adminData = userData[1];
-
-  await page.goto('/inceis/dashboard#!');
-
-  await admin.admin_menu(
-    adminData.email,
-    adminData.firstname,
-    adminData.surname,
-    adminData.gender,
-    adminData.cellNumber,
-    adminData.Designation,
-    adminData.Associate_Department,
-    adminData.province.index,
-    adminData.Government,
-    adminData.Institution,
-    adminData.District_Municipalitys,
-    adminData.Local_Municipality,
-    adminData.Metros
-  );
-
-  await admin.selectArea(
-    'Metro',
-    '',
-    '',
-    adminData.Metros
-  );
-
-
-
-});
