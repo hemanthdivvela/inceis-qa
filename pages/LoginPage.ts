@@ -20,7 +20,7 @@ export class LoginPage {
     this.Email = page.getByRole('textbox', { name: 'User Name' });
     this.password = page.getByPlaceholder('Password', { exact: true });
     this.submitButton = page.getByRole('button', { name: 'Login' });
-    this.errorMsg = page.locator('.error-messages') || page.getByText('User name required', { exact: true }) || page.getByRole('heading', { name: 'Invalid Email Address.' })
+    this.errorMsg = page.locator('.error-messages') || page.getByText('User name required', { exact: true }) || page.getByRole('heading', { name: 'Invalid Email Address.' } )
   //dashboardText = () => this.page.locator('div.tran-form-container').locator('div').nth(1)
     this.dashboardText = page.locator("//a[@id='dropdownProfile']//img[@title='eCasManagementSystem.']") ;
   }
