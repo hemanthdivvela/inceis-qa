@@ -7,7 +7,7 @@ type AuthFixtures = {
 
 export const test = base.extend<AuthFixtures>({
   authenticatedPage: async ({ page }, use) => {
-    await page.goto(process.env.BASE_URL!);
+    await page.goto(process.env.BASE_URL!, {waitUntil:"networkidle"});
     async function login(username: string, password: string): Promise<void> {
       await page.getByRole('textbox', { name: 'User Name' }).pressSequentially(username);;
       await page.getByPlaceholder('Password', { exact: true }).pressSequentially(password);
