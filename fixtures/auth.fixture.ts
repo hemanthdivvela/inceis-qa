@@ -1,5 +1,4 @@
 import { test as base, expect } from '@playwright/test';
-import { LoginPage } from '../pages/LoginPage';
 
 type AuthFixtures = {
   authenticatedPage: void;
