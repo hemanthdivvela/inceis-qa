@@ -55,7 +55,7 @@ export default defineConfig({
     
     
     ignoreHTTPSErrors: true,
-    headless: false
+    headless: true
   
   },
 
