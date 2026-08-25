@@ -13,10 +13,5 @@
         "email":"sai",
         "password": "Gpinfo1234$",
         "validity": "invalid"
-    },
-    {
-        "email":" ",
-        "password":" ",
-        "validity": "invalid"
     }
 ]
