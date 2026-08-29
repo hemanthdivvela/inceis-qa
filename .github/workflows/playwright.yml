@@ -49,3 +49,20 @@ jobs:
           name: playwright-report-${{ matrix.os }}
           path: playwright-report/
           retention-days: 7
+      - name: Upload Playwright test artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-test-results-${{ matrix.os }}
+          path: |
+            test-results/
+            playwright-report/
+          retention-days: 7
+      - name: Upload Allure results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results-${{ matrix.os }}
+          path: allure-results/
+          if-no-files-found: ignore
+          retention-days: 7
