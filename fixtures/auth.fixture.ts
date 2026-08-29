@@ -6,7 +6,7 @@ type AuthFixtures = {
 
 export const test = base.extend<AuthFixtures>({
   authenticatedPage: async ({ page }, use) => {
-    const baseUrl = process.env.BASE_URL!;
+    const baseUrl = process.env.APP_URL!;
     const username = process.env.TEST_USERNAME!;
     const password = process.env.TEST_PASSWORD!;
     
