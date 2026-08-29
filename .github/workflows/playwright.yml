@@ -112,13 +112,13 @@ jobs:
       # -----------------------------------------
       # Configure GitHub Pages
       # -----------------------------------------
-      - name: Setup Pages
+      - name: Configure GitHub Pages
         uses: actions/configure-pages@v6
 
       # -----------------------------------------
       # Upload report to GitHub Pages
       # -----------------------------------------
-      - name: Upload Pages Artifact
+      - name: Upload Playwright Report
         uses: actions/upload-pages-artifact@v3
         with:
           path: playwright-report
@@ -126,7 +126,7 @@ jobs:
       # -----------------------------------------
       # Deploy report
       # -----------------------------------------
-      - name: Deploy to GitHub Pages
+      - name: Deploy Playwright Report
         id: deployment
         uses: actions/deploy-pages@v4
 
