@@ -96,7 +96,7 @@ jobs:
       # Download Ubuntu report
       # -----------------------------------------
       - name: Download Playwright Report
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: playwright-report-ubuntu-latest
           path: playwright-report
@@ -105,13 +105,13 @@ jobs:
       # Configure GitHub Pages
       # -----------------------------------------
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       # -----------------------------------------
       # Upload report to GitHub Pages
       # -----------------------------------------
       - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v6
         with:
           path: playwright-report
 
@@ -120,7 +120,7 @@ jobs:
       # -----------------------------------------
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v6
 
       # -----------------------------------------
       # Show report URL
