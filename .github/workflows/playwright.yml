@@ -5,6 +5,11 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+# Required for GitHub Pages deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   test:
@@ -43,7 +48,7 @@ jobs:
       - name: Run tests
         run: npx playwright test
 
-      - name: Upload Playwright report
+      - name: Upload Playwright report HTML Report
         if: always()
         uses: actions/upload-artifact@v6
         with:
@@ -67,3 +72,64 @@ jobs:
           path: allure-results/
           if-no-files-found: ignore
           retention-days: 7
+# ==================================================
+  # Publish Playwright HTML Report
+  # ==================================================
+  deploy-report:
+    name: Publish Playwright Report
+
+    needs: test
+
+    runs-on: ubuntu-latest
+
+    # Deploy even when tests fail
+    if: always()
+
+    permissions:
+      pages: write
+      id-token: write
+      contents: read
+
+    steps:
+
+      # -----------------------------------------
+      # Download Ubuntu report
+      # -----------------------------------------
+      - name: Download Playwright Report
+        uses: actions/download-artifact@v4
+        with:
+          name: playwright-report-ubuntu-latest
+          path: playwright-report
+
+      # -----------------------------------------
+      # Configure GitHub Pages
+      # -----------------------------------------
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # -----------------------------------------
+      # Upload report to GitHub Pages
+      # -----------------------------------------
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: playwright-report
+
+      # -----------------------------------------
+      # Deploy report
+      # -----------------------------------------
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      # -----------------------------------------
+      # Show report URL
+      # -----------------------------------------
+      - name: Show Report URL
+        run: |
+          echo "=========================================="
+          echo "🎭 Playwright HTML Report"
+          echo "=========================================="
+          echo "Report URL:"
+          echo "${{ steps.deployment.outputs.page_url }}"
+          echo "=========================================="
