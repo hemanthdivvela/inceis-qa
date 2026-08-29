@@ -105,13 +105,13 @@ jobs:
       # Configure GitHub Pages
       # -----------------------------------------
       - name: Setup Pages
-        uses: actions/configure-pages@v6
+        uses: actions/configure-pages@v5
 
       # -----------------------------------------
       # Upload report to GitHub Pages
       # -----------------------------------------
       - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v6
+        uses: actions/upload-pages-artifact@v3
         with:
           path: playwright-report
 
