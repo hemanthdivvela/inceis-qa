@@ -7,8 +7,8 @@ type AuthFixtures = {
 export const test = base.extend<AuthFixtures>({
   authenticatedPage: async ({ page }, use) => {
     const baseUrl = process.env.APP_URL!;
-    const username = process.env.TEST_USERNAME!;
-    const password = process.env.TEST_PASSWORD!;
+    const username = process.env.USERNAME!;
+    const password = process.env.PASSWORD!;
     
     if (!baseUrl) {
       throw new Error('BASE_URL environment variable is not defined');

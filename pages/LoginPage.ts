@@ -26,7 +26,7 @@ export class LoginPage {
   }
 
   async goto() { 
-    const baseurl = process.env.BASE_URL;
+    const baseurl = process.env.APP_URL!;
     if (!baseurl) {
       throw new Error ('Base_url env variable is not defined');
     }
