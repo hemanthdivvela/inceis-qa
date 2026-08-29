@@ -1,5 +1,4 @@
 email,password,validity
 Admin@Gpinfotech.com,Gpinfo1234$,valid
-hemanth@123gp.com,Password123,valid
 wrong@gmail.com,WrongPassword,invalid
 test@gmail.com,Wrong123,invalid
