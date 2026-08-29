@@ -91,6 +91,14 @@ jobs:
       contents: read
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
 
       # -----------------------------------------
       # Download Ubuntu report
@@ -105,7 +113,7 @@ jobs:
       # Configure GitHub Pages
       # -----------------------------------------
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       # -----------------------------------------
       # Upload report to GitHub Pages
